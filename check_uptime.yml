@@ -1,0 +1,9 @@
+---
+- name: Check uptime
+  # This host is defined in the `first-inventory.ini`
+  hosts: localhost
+  tasks:
+    - name: Execute uptime command
+      command: uptime
+      register: uptime_result
+    - debug: var=uptime_result.stdout_lines
