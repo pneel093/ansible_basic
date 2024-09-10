@@ -1,6 +1,6 @@
 ---
 - name: Check uptime
-  # This host is defined in the `first-inventory.ini`
+  # This host is defined in the `inventory.ini`
   hosts: localhost
   tasks:
     - name: Execute uptime command
