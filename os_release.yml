@@ -1,0 +1,9 @@
+---
+- name: Current OS release
+  hosts: localhost
+
+  tasks:
+    - name: Check OS release
+      command: cat /etc/os-release
+      register: os_result
+    - debug: var=os_result.stdout_lines
